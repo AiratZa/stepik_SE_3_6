@@ -7,7 +7,7 @@ def test_has_add_to_basket_button(browser):
     # time.sleep(30)
     browser.implicitly_wait(5)
     try:
-        #если не найдет ни одного элемента, то длина (len) будет равен 0
+        #если не найдет ни одного элемента, то длина (len) списка будет равна 0
         add_to_basket_button = browser.find_elements(By.CLASS_NAME, "btn-add-to-basket")
     finally:
         assert len(add_to_basket_button) > 0, "Can not find 'ADD TO BASKET' button"
